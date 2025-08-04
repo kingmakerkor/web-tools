@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from 'next/link';
+import Script from 'next/script'; // Script 컴포넌트 임포트
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./globals.css";
@@ -19,6 +20,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <head>
+        {/* Google AdSense 자동 광고 스크립트 */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1542451375735648"
+          crossOrigin="anonymous"
+          strategy="lazyOnload" // 페이지 로드 후 지연 로드
+        />
+      </head>
       <body className={`${inter.className} bg-gray-50 text-gray-800`}>
         <div className="d-flex flex-column min-vh-100">
           <header>
