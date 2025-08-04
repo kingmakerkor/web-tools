@@ -26,7 +26,7 @@ export default function RootLayout({
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1542451375735648"
           crossOrigin="anonymous"
-          strategy="lazyOnload" // 페이지 로드 후 지연 로드
+          strategy="beforeInteractive" // AdSense 오류 해결을 위해 변경
         />
       </head>
       <body className={`${inter.className} bg-gray-50 text-gray-800`}>
