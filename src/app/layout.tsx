@@ -56,6 +56,9 @@ export default function RootLayout({
                       </ul>
                     </li>
                     <li className="nav-item">
+                      <Link href="/blog" className="nav-link">블로그</Link>
+                    </li>
+                    <li className="nav-item">
                       <Link href="/about-us" className="nav-link">서비스 소개</Link>
                     </li>
                     <li className="nav-item">
