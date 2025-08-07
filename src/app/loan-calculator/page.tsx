@@ -74,6 +74,7 @@ export default function LoanCalculator() {
 
   return (
     <ToolPageLayout
+      title="대출 이자 계산기"
       description="대출 원금, 이자율, 기간, 상환 방식에 따른 월 상환금과 총 이자를 정확하게 계산해주는 온라인 대출 계산기입니다. 합리적인 금융 계획을 세우고 현명한 대출 결정을 내리는 데 도움을 드립니다."
     >
       <div className="card shadow-lg">
@@ -145,8 +146,8 @@ export default function LoanCalculator() {
           <li><strong>대출 원금 입력:</strong> 빌리고자 하는 대출의 총 금액을 원 단위로 입력합니다.</li>
           <li><strong>연 이자율 입력:</strong> 대출에 적용되는 연 이자율을 퍼센트(%) 단위로 입력합니다. (예: 5%는 5로 입력)</li>
           <li><strong>대출 기간 입력:</strong> 대출을 상환할 총 기간을 개월 단위로 입력합니다.</li>
-          <li><strong>상환 방식 선택:</strong> &#39;원리금균등상환&#39; 또는 &#39;원금균등상환&#39; 중 원하는 상환 방식을 선택합니다.</li>
-          <li><strong>계산하기 버튼 클릭:</strong> 모든 정보를 입력한 후 '계산하기' 버튼을 클릭하면 결과가 표시됩니다.</li>
+          <li><strong>상환 방식 선택:</strong> 원리금균등상환 또는 원금균등상환 중 원하는 상환 방식을 선택합니다.</li>
+          <li><strong>계산하기 버튼 클릭:</strong> 모든 정보를 입력한 후 계산하기 버튼을 클릭하면 결과가 표시됩니다.</li>
         </ol>
 
         <h3 className="text-xl font-semibold mb-3">계산 결과 이해하기:</h3>
