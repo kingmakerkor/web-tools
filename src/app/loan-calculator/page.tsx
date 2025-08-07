@@ -145,7 +145,7 @@ export default function LoanCalculator() {
           <li><strong>대출 원금 입력:</strong> 빌리고자 하는 대출의 총 금액을 원 단위로 입력합니다.</li>
           <li><strong>연 이자율 입력:</strong> 대출에 적용되는 연 이자율을 퍼센트(%) 단위로 입력합니다. (예: 5%는 5로 입력)</li>
           <li><strong>대출 기간 입력:</strong> 대출을 상환할 총 기간을 개월 단위로 입력합니다.</li>
-          <li><strong>상환 방식 선택:</strong> &apos;원리금균등상환&apos; 또는 &apos;원금균등상환&apos; 중 원하는 상환 방식을 선택합니다.</li>
+          <li><strong>상환 방식 선택:</strong> &#39;원리금균등상환&#39; 또는 &#39;원금균등상환&#39; 중 원하는 상환 방식을 선택합니다.</li>
           <li><strong>계산하기 버튼 클릭:</strong> 모든 정보를 입력한 후 '계산하기' 버튼을 클릭하면 결과가 표시됩니다.</li>
         </ol>
 

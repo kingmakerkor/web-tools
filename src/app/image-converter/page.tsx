@@ -137,7 +137,7 @@ export default function ImageConverter() {
           <li><strong>변환 형식 선택:</strong> 드롭다운 메뉴에서 변환하고자 하는 이미지 형식(예: PNG &rarr; JPG, JPG &rarr; PNG, WEBP &rarr; JPG 등)을 선택합니다.</li>
           <li><strong>파일 선택:</strong> &quot;변환할 파일 선택&quot; 버튼을 클릭하여 변환하고자 하는 이미지를 업로드합니다.</li>
           <li><strong>변환하기:</strong> &quot;[선택한 형식]로 변환하기&quot; 버튼을 클릭하면 이미지가 변환됩니다.</li>
-          <li><strong>다운로드:</strong> 변환이 완료되면 "다운로드" 버튼을 클릭하여 변환된 이미지를 저장합니다.</li>
+          <li><strong>다운로드:</strong> 변환이 완료되면 &quot;다운로드&quot; 버튼을 클릭하여 변환된 이미지를 저장합니다.</li>
         </ol>
 
         <h3 className="text-xl font-semibold mb-3">이미지 변환기 활용 팁:</h3>
