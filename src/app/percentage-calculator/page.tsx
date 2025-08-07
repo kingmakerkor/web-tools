@@ -130,21 +130,21 @@ export default function PercentageCalculator() {
         <h3 className="text-xl font-semibold mb-3">1. 값의 % 계산:</h3>
         <ul className="list-disc list-inside ml-4 space-y-2 mb-4">
           <li><strong>사용 목적:</strong> 특정 숫자의 몇 퍼센트가 얼마인지 계산할 때 사용합니다. (예: 100의 20%는 얼마인가?)</li>
-          <li><strong>입력:</strong> 첫 번째 입력란에 '전체 값'을, 두 번째 입력란에 '비율 (%)'을 입력합니다.</li>
-          <li><strong>결과:</strong> '계산하기' 버튼을 누르면 해당 퍼센트에 해당하는 값이 나옵니다.</li>
+          <li><strong>입력:</strong> 첫 번째 입력란에 &apos;전체 값&apos;을, 두 번째 입력란에 &apos;비율 (%)&apos;을 입력합니다.</li>
+          <li><strong>결과:</strong> &apos;계산하기&apos; 버튼을 누르면 해당 퍼센트에 해당하는 값이 나옵니다.</li>
         </ul>
 
         <h3 className="text-xl font-semibold mb-3">2. A는 B의 몇 %?:</h3>
         <ul className="list-disc list-inside ml-4 space-y-2 mb-4">
           <li><strong>사용 목적:</strong> 한 값이 다른 값의 몇 퍼센트를 차지하는지 계산할 때 사용합니다. (예: 20은 100의 몇 %인가?)</li>
-          <li><strong>입력:</strong> 첫 번째 입력란에 '일부 값'을, 두 번째 입력란에 '전체 값'을 입력합니다.</li>
+          <li><strong>입력:</strong> 첫 번째 입력란에 &apos;일부 값&apos;을, 두 번째 입력란에 &apos;전체 값&apos;을 입력합니다.</li>
           <li><strong>결과:</strong> '계산하기' 버튼을 누르면 '일부 값'이 '전체 값'의 몇 퍼센트인지 나옵니다.</li>
         </ul>
 
         <h3 className="text-xl font-semibold mb-3">3. 값의 변화율:</h3>
         <ul className="list-disc list-inside ml-4 space-y-2 mb-4">
           <li><strong>사용 목적:</strong> 어떤 값이 다른 값으로 변했을 때의 변화율(증가 또는 감소율)을 계산할 때 사용합니다. (예: 100에서 120으로 변하면 몇 % 증가한 것인가?)</li>
-          <li><strong>입력:</strong> 첫 번째 입력란에 '이전 값'을, 두 번째 입력란에 '이후 값'을 입력합니다.</li>
+          <li><strong>입력:</strong> 첫 번째 입력란에 &apos;이전 값&apos;을, 두 번째 입력란에 &apos;이후 값&apos;을 입력합니다.</li>
           <li><strong>결과:</strong> '계산하기' 버튼을 누르면 값의 변화율이 퍼센트로 나옵니다.</li>
         </ul>
         

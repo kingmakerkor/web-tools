@@ -62,7 +62,7 @@ export default function QrCodeGenerator() {
         <ol className="list-decimal list-inside ml-4 space-y-2 mb-4">
           <li><strong>정보 입력:</strong> QR 코드로 변환하고자 하는 URL, 일반 텍스트, 이메일 주소, 전화번호 등 원하는 정보를 상단의 입력창에 입력합니다.</li>
           <li><strong>QR 코드 자동 생성:</strong> 정보를 입력하는 즉시 실시간으로 QR 코드가 자동으로 생성되어 화면에 표시됩니다.</li>
-          <li><strong>QR 코드 다운로드:</strong> 생성된 QR 코드 이미지 아래에 있는 "QR 코드 다운로드 (.png)" 버튼을 클릭하여 이미지를 저장합니다.</li>
+          <li><strong>QR 코드 다운로드:</strong> 생성된 QR 코드 이미지 아래에 있는 &quot;QR 코드 다운로드 (.png)&quot; 버튼을 클릭하여 이미지를 저장합니다.</li>
         </ol>
 
         <h3 className="text-xl font-semibold mb-3">QR 코드 활용 팁:</h3>
