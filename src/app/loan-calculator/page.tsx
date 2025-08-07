@@ -74,8 +74,7 @@ export default function LoanCalculator() {
 
   return (
     <ToolPageLayout
-      title="대출 이자 계산기"
-      description="월 상환금과 총 이자를 계산하여 합리적인 금융 계획을 세워보세요."
+      description="대출 원금, 이자율, 기간, 상환 방식에 따른 월 상환금과 총 이자를 정확하게 계산해주는 온라인 대출 계산기입니다. 합리적인 금융 계획을 세우고 현명한 대출 결정을 내리는 데 도움을 드립니다."
     >
       <div className="card shadow-lg">
         <div className="card-body p-4">
@@ -136,6 +135,38 @@ export default function LoanCalculator() {
             <div className="alert alert-danger mt-3" role="alert">{result.error}</div>
         )}
       </div>
+
+      <section className="mt-8 p-6 bg-white rounded-lg shadow-md">
+        <h2 className="text-2xl font-bold mb-4">대출 계산기 사용법</h2>
+        <p className="mb-4">이 대출 계산기는 대출 원금, 이자율, 기간, 상환 방식에 따라 월별 상환액과 총 이자액을 계산해줍니다. 아래 단계를 따라 사용해보세요.</p>
+        
+        <h3 className="text-xl font-semibold mb-3">사용 단계:</h3>
+        <ol className="list-decimal list-inside ml-4 space-y-2 mb-4">
+          <li><strong>대출 원금 입력:</strong> 빌리고자 하는 대출의 총 금액을 원 단위로 입력합니다.</li>
+          <li><strong>연 이자율 입력:</strong> 대출에 적용되는 연 이자율을 퍼센트(%) 단위로 입력합니다. (예: 5%는 5로 입력)</li>
+          <li><strong>대출 기간 입력:</strong> 대출을 상환할 총 기간을 개월 단위로 입력합니다.</li>
+          <li><strong>상환 방식 선택:</strong> '원리금균등상환' 또는 '원금균등상환' 중 원하는 상환 방식을 선택합니다.</li>
+          <li><strong>계산하기 버튼 클릭:</strong> 모든 정보를 입력한 후 '계산하기' 버튼을 클릭하면 결과가 표시됩니다.</li>
+        </ol>
+
+        <h3 className="text-xl font-semibold mb-3">계산 결과 이해하기:</h3>
+        <ul className="list-disc list-inside ml-4 space-y-2 mb-4">
+          <li><strong>총 상환액:</strong> 대출 원금과 총 이자를 합한 금액입니다.</li>
+          <li><strong>총 이자:</strong> 대출 기간 동안 지불하게 될 총 이자 금액입니다.</li>
+          <li><strong>월 상환금:</strong> 매월 상환해야 하는 금액입니다. (원리금균등상환의 경우 고정, 원금균등상환의 경우 변동)</li>
+          <li><strong>상환 스케줄:</strong> 월별 원금, 이자, 잔금 내역을 상세하게 확인할 수 있습니다.</li>
+        </ul>
+
+        <h3 className="text-xl font-semibold mb-3">대출 계산기 활용 팁:</h3>
+        <ul className="list-disc list-inside ml-4 space-y-2">
+          <li><strong>대출 계획 수립:</strong> 다양한 대출 조건(원금, 이자율, 기간)을 시뮬레이션하여 자신에게 가장 유리한 대출 상품을 선택하는 데 도움을 받을 수 있습니다.</li>
+          <li><strong>월별 예산 관리:</strong> 예상 월 상환금을 미리 파악하여 가계 재정 계획을 세우는 데 활용할 수 있습니다.</li>
+          <li><strong>이자 부담 비교:</strong> 원리금균등상환과 원금균등상환 방식에 따른 총 이자액과 월별 상환액의 차이를 비교하여 자신에게 적합한 상환 방식을 결정할 수 있습니다.</li>
+          <li><strong>조기 상환 계획:</strong> 월별 상환 스케줄을 통해 잔금을 확인하고, 조기 상환 시의 이점 등을 고려한 계획을 세울 수 있습니다.</li>
+        </ul>
+        
+        <p className="mt-4">이 대출 계산기를 통해 현명한 금융 결정을 내리고, 안정적인 재정 관리를 시작해보세요!</p>
+      </section>
     </ToolPageLayout>
   );
 }
