@@ -60,8 +60,8 @@ const PrivacyPolicyPage = () => {
         <h2 className="text-2xl font-semibold mb-4">7. 개인정보 보호 책임자</h2>
         <p className="mb-2">본 웹사이트는 개인정보 처리에 관한 업무를 총괄하고, 개인정보 처리와 관련한 이용자의 불만 처리 및 피해 구제 등을 위하여 아래와 같이 개인정보 보호 책임자를 지정하고 있습니다.</p>
         <ul className="list-disc list-inside ml-4">
-          <li>이름: [귀하의 이름 또는 담당자명]</li>
-          <li>이메일: [귀하의 이메일 주소]</li>
+          <li>이름: Peter</li>
+          <li>이메일: peter_ever@outlook.com</li>
         </ul>
         <p className="mt-2">이용자는 본 웹사이트의 서비스를 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만 처리, 피해 구제 등에 관한 사항을 개인정보 보호 책임자 및 담당 부서로 문의하실 수 있습니다. 본 웹사이트는 이용자의 문의에 대해 지체 없이 답변 및 처리해드릴 것입니다.</p>
       </section>

@@ -21,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Google AdSense 자동 광고 스크립트 */}
         <Script
           async
@@ -43,9 +44,9 @@ export default function RootLayout({
                 <div className="collapse navbar-collapse" id="navbarNav">
                   <ul className="navbar-nav ms-auto">
                     <li className="nav-item dropdown">
-                      <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <Link href="/tools" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         도구
-                      </a>
+                      </Link>
                       <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><Link href="/character-count" className="dropdown-item">글자 수 계산기</Link></li>
                         <li><Link href="/date-calculator" className="dropdown-item">날짜 계산기</Link></li>

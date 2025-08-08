@@ -8,12 +8,10 @@ const ContactUsPage = () => {
 
       <section className="mb-8">
         <p className="mb-4">서비스 이용에 대한 문의, 제안, 불편 사항 등 궁금한 점이 있으시면 아래 이메일 주소로 연락 주시기 바랍니다.</p>
-        <p className="text-lg font-semibold">이메일: [귀하의 이메일 주소]</p>
+        <p className="text-lg font-semibold">이메일: peter_ever@outlook.com</p>
         <p className="mt-4">최대한 빠르게 답변해 드리겠습니다.</p>
       </section>
 
-      {/* 선택 사항: 문의 양식 추가 (추후 필요 시 구현) */}
-      {/*
       <section>
         <h2 className="text-2xl font-semibold mb-4">문의 양식</h2>
         <form className="space-y-4">
@@ -34,7 +32,6 @@ const ContactUsPage = () => {
           </button>
         </form>
       </section>
-      */}
     </div>
   );
 };
