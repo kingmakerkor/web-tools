@@ -1,10 +1,17 @@
-
 import React from 'react';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import ToolPageLayout from '@/components/ToolPageLayout';
 
+// 블로그 게시물 타입 정의
+type Post = {
+  title: string;
+  date: string;
+  content: React.ReactNode;
+};
+
 // 임시 블로그 게시물 데이터 (실제 환경에서는 DB 또는 CMS에서 가져옴)
-const posts = {
+const posts: { [key: string]: Post } = {
   'how-to-use-qr-code': {
     title: 'QR 코드, 어떻게 활용해야 할까요?',
     date: '2025-08-08',
@@ -16,16 +23,16 @@ const posts = {
           <li><strong>마케팅 및 홍보:</strong> 제품 포장, 광고판, 명함 등에 QR 코드를 넣어 웹사이트, 이벤트 페이지, 소셜 미디어 등으로 고객을 유도할 수 있습니다.</li>
           <li><strong>정보 공유:</strong> 복잡한 URL, 긴 텍스트, Wi-Fi 비밀번호 등을 QR 코드로 만들어 쉽고 빠르게 공유할 수 있습니다.</li>
           <li><strong>결제 시스템:</strong> 모바일 결제 앱과 연동하여 간편하고 빠른 결제를 가능하게 합니다.</li>
-          <li><strong>교육:</strong> 교재나 전시물에 QR 코드를 넣어 추가 정보, 동영상 자료 등으로 연결하여 학습 효과를 높일 수 있습니다.</li>
+                    <li><strong>교육:</strong> 교재나 전시물에 QR 코드를 넣어 추가 정보, 동영상 자료 등으로 연결하여 학습 효과를 높일 수 있습니다.</li>
         </ul>
         <h3 className="text-xl font-semibold mb-3">QR 코드 생성 팁:</h3>
         <ul className="list-disc list-inside ml-4 space-y-2">
           <li><strong>명확한 목적:</strong> QR 코드를 통해 사용자가 무엇을 얻을 수 있는지 명확하게 전달해야 합니다.</li>
           <li><strong>디자인 고려:</strong> 브랜드 이미지에 맞춰 색상이나 로고를 추가하여 시각적인 매력을 높일 수 있습니다.</li>
           <li><strong>테스트 필수:</strong> 생성된 QR 코드가 모든 기기에서 정상적으로 스캔되는지 반드시 테스트해야 합니다.</li>
-          <li><strong>추적 및 분석:</strong> QR 코드 스캔 횟수 등을 추적하여 마케팅 효과를 분석할 수 있습니다.</li>
+          <li><strong>추적 및 분석:</strong> QR 코드 스캔 횟수 등을 추적하여 마케팅 효과를 분석할 수 입니다.</li>
         </ul>
-        <p className="mt-4">저희 웹사이트의 <Link href="/qr-code-generator" className="text-blue-600 hover:underline">QR 코드 생성기</Link>를 활용하여 여러분만의 독창적인 QR 코드를 만들어보세요!</p>
+        <p className="mt-4">저희 웹사이트의 <Link href="/qr-code-generator" className="text-blue-600 hover:underline" prefetch={true}>QR 코드 생성기</Link>를 활용하여 여러분만의 독창적인 QR 코드를 만들어보세요!</p>
       </>
     ),
   },
@@ -47,20 +54,22 @@ const posts = {
           <li><strong>올바른 파일 형식 선택:</strong> 사진에는 JPG, 투명 배경이 필요한 이미지에는 PNG, 애니메이션에는 GIF, 그리고 최신 웹 환경에서는 WEBP를 고려합니다.</li>
           <li><strong>이미지 크기 조정:</strong> 웹사이트에 필요한 실제 크기로 이미지를 조절합니다. 불필요하게 큰 이미지를 사용하지 않습니다.</li>
           <li><strong>압축:</strong> 이미지 품질을 크게 저하시키지 않으면서 파일 크기를 줄이는 압축 도구를 사용합니다.</li>
-          <li><strong>지연 로딩 (Lazy Loading):</strong> 당장 화면에 보이지 않는 이미지는 나중에 로딩되도록 설정하여 초기 페이지 로딩 속도를 높입니다.</li>
+                    <li><strong>지연 로딩 (Lazy Loading):</strong> 당장 화면에 보이지 않는 이미지는 나중에 로딩되도록 설정하여 초기 페이지 로딩 속도를 높입니다.</li>
         </ul>
-        <p className="mt-4">저희 웹사이트의 <Link href="/image-converter" className="text-blue-600 hover:underline">이미지 포맷 변환기</Link>를 활용하여 이미지를 최적화하고 웹사이트 성능을 향상시켜보세요!</p>
+        <p className="mt-4">저희 웹사이트의 <Link href="/image-converter" className="text-blue-600 hover:underline" prefetch={true}>이미지 포맷 변환기</Link>를 활용하여 이미지를 최적화하고 웹사이트 성능을 향상시켜보세요!</p>
       </>
     ),
   },
 };
 
-interface BlogPostPageProps {
-  params: { slug: string };
-}
+export default async function BlogPostPage({ params }: { params: any }) {
+  // slug 유효성 검사
+  if (!params.slug || typeof params.slug !== 'string' || !posts[params.slug]) {
+    notFound();
+    return null;
+  }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = posts[params.slug as keyof typeof posts];
+  const post = posts[params.slug];
 
   if (!post) {
     notFound();
@@ -72,9 +81,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         <article className="bg-white p-6 rounded-lg shadow-md">
           <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
           <p className="text-sm text-gray-500 mb-4">작성일: {post.date}</p>
-          <div className="prose prose-lg max-w-none">
-            {post.content}
-          </div>
+          <div className="prose prose-lg max-w-none">{post.content}</div>
         </article>
       </div>
     </ToolPageLayout>
